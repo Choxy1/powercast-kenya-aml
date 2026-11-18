@@ -1,0 +1,90 @@
+{
+  "best_model": "logistic_regression",
+  "model_stage": "final_refit_on_pre_2026_development_data",
+  "selection_metric": "July-Dec 2025 validation PR AUC",
+  "selection_validation_pr_auc": 0.4099607161675792,
+  "threshold": 0.15809597199304434,
+  "threshold_source": "July-Dec 2025 validation F1 optimization",
+  "features": [
+    "population",
+    "events",
+    "outage_hours",
+    "events_lag1",
+    "events_lag2",
+    "events_lag3",
+    "hours_lag1",
+    "hours_lag2",
+    "hours_lag3",
+    "events_roll3",
+    "events_roll6",
+    "events_roll12",
+    "hours_roll3",
+    "hours_roll6",
+    "hours_roll12",
+    "flag_rate3",
+    "flag_rate6",
+    "flag_rate12",
+    "hist_rate",
+    "hist_events_mean",
+    "months_since_outage",
+    "month_sin",
+    "month_cos",
+    "county_name"
+  ],
+  "development_rows": 36597,
+  "test_rows": 9981,
+  "development_target_period_end": "2025-12-01",
+  "test_period": [
+    "2026-01-01",
+    "2026-09-01"
+  ],
+  "target_definition": "At least one mapped PawaSwitch planned interruption in the ward during the following month.",
+  "scope_note": "Predictions refer to mapped planned interruption notices for represented wards, not all physical or unplanned outages.",
+  "evaluation_integrity_note": "The frozen final model was selected using pre-2026 data only. Earlier prototype feasibility runs had inspected aggregate 2026 performance, so the 2026 period is a locked final evaluation period but not a perfectly pristine never-observed holdout.",
+  "test_metrics": {
+    "pr_auc": 0.35582571718875483,
+    "roc_auc": 0.693362702223414,
+    "brier": 0.11689974227718557,
+    "ece10": 0.02300774035949499,
+    "threshold": 0.15809597199304434,
+    "precision": 0.24030815109343936,
+    "recall": 0.634514435695538,
+    "specificity": 0.6385242993969493,
+    "f1": 0.3485940879596251,
+    "balanced_accuracy": 0.6365193675462437,
+    "predicted_positive_rate": 0.4031660154293157,
+    "tn": 5400,
+    "fp": 3057,
+    "fn": 557,
+    "tp": 967
+  },
+  "cluster_bootstrap_ci": {
+    "pr_auc": {
+      "estimate": 0.35582571718875483,
+      "ci_low": 0.3163916995084139,
+      "ci_high": 0.3938363286947124,
+      "bootstrap_replicates": 400
+    },
+    "roc_auc": {
+      "estimate": 0.693362702223414,
+      "ci_low": 0.6722264626935838,
+      "ci_high": 0.7143404450035428,
+      "bootstrap_replicates": 400
+    },
+    "brier": {
+      "estimate": 0.11689974227718557,
+      "ci_low": 0.11068436816237355,
+      "ci_high": 0.12208623440665724,
+      "bootstrap_replicates": 400
+    }
+  },
+  "model_version": "powercast-logistic-2026-10-v1",
+  "serving_api_version": "1.2.0",
+  "raw_data_sha256": {
+    "events.csv": "26e717302dfa8fe80e4295acc0a1d9001eb48e13dbbadd3edae6044ca7b2b89e",
+    "event_wards.csv": "2a286f5a189a09f56b3c644228217a1ed232974744b81817e51c89e4636776b4",
+    "localities_matched.csv": "c6f1fc1db6a289b3b3bf9f5c885b84ecafcd69404bce1f1f89924218803c3b73",
+    "ward_stats_monthly.csv": "ec9d0ff5fce2d5c0d9c6c3e32594960fa8d4572596e8045b7a75342a5492a51a",
+    "areas.geojson": "49e3c425994244789215836cee5d2d8526bacb698bddb639e81006fa3563941a"
+  }
+}
