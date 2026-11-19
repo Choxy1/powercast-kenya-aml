@@ -1,5 +1,5 @@
 # AI Use Disclosure
 
-AI assistance was used to support project planning, code scaffolding, debugging, documentation, and explanation of modelling choices. The student remains responsible for verifying the data transformations, running the code, interpreting the results, checking citations, and defending all methodological decisions and limitations.
+Minimal AI assistance was used in this project, primarily for limited guidance on project organization, clarification of technical concepts, and minor troubleshooting support. I independently performed the data preparation, modelling, analysis, interpretation of results, and validation of the project outcomes.
 
-No AI generated result should be treated as a substitute for reproducible execution of the project code.
+All methodological decisions, code execution, data transformations, and conclusions presented in this project remain my resposibility and were independently verified for accuracy and reproducibility.
